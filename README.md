@@ -34,7 +34,11 @@ Phases:
 3 - 3D animation assistants.
 4 - Real world agents assistants.
 
-## Brain Function Components  
+
+
+## Brain Function Components 
+
+Brains don't split into clean modules, but if we named components the way an engineer would, the functional "departments" would look roughly like this:
 
 **Input (sensors)**
 
@@ -71,7 +75,7 @@ Phases:
 
 The big caveat: real brains are more like overlapping networks than Lego bricks — vision, memory, and emotion all talk to each other constantly. But as a naming scheme, that's the decomposition most neuroscientists would recognize.
 
- "build a brain out of AI agents." Here's how I'd staff each department with the agent best suited to the job:
+"build a brain out of AI agents." Here's how I'd staff each department with the agent best suited to the job:
 
 **Sensors**
 
@@ -106,8 +110,3 @@ The big caveat: real brains are more like overlapping networks than Lego bricks 
 - **Self & introspection** → a monitoring/critique agent that watches the system's own outputs and asks "why did I do that?"
 
 The fun part of the mapping: it inverts the usual hype. The LLM (language) isn't the brain — it's one department. The actual "self" is the quiet orchestrator plus the introspection agent, and the reward model is arguably the most powerful agent in the building, because it decides what everyone else optimizes for.
-
-mistral.ai
-
-
-
