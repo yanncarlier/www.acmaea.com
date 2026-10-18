@@ -8,29 +8,58 @@
         <link rel="stylesheet"
             href="./css/book.min.f4513b2d8fab87aa86ea84b12e6ef34545da99769cec9d70c06ab774f08bda78.css">
     <style>
-        /* Dark background override */
-        body {
-            background: #1a1a2e !important;
-            color: #e8e8e8;
+        /* Dark theme override */
+        :root {
+            --bg: #1a1a2e;
+            --panel: #16213e;
+            --text: #e0e0e0;
+            --muted: #9aa0b4;
+            --accent: #4ea8de;
+            --border: #2d3250;
+        }
+        html, body {
+            background: var(--bg) !important;
+            color: var(--text);
         }
         .book-page,
-        .markdown,
-        .book-search input,
+        .book-menu nav,
+        .book-toc nav,
         .book-languages .book-languages-list,
-        .book-expand .book-expand-head,
+        .book-footer {
+            background: var(--panel);
+            color: var(--text);
+        }
+        .book-search input,
         .markdown pre,
-        .markdown table tr:nth-child(2n),
         .markdown blockquote,
         .markdown .book-expand,
-        .markdown .book-tabs {
-            background: #f8f9fa;
-            color: #000;
+        .markdown .book-tabs,
+        .markdown table tr:nth-child(2n) {
+            background: var(--panel);
+            color: var(--text);
+            border-color: var(--border);
         }
-        a { color: #05b; }
+        .book-search input { color: var(--text); }
+        .markdown,
+        .markdown-inner,
+        .book-page { color: var(--text); }
+        .markdown h1, .markdown h2, .markdown h3,
+        .markdown h4, .markdown h5, .markdown h6 { color: var(--text); }
+        .markdown a { color: var(--accent); }
+        .markdown a:visited { color: #b388ff; }
+        .markdown code { background: #2d3250; }
+        .markdown hr { background: var(--border); }
+        .markdown table tr th,
+        .markdown table tr td { border-color: var(--border); }
         .book-menu a,
-        .book-toc a,
-        .book-footer { color: #e8e8e8; }
-        .book-menu a.active { color: #05b; }
+        .book-toc a { color: var(--text); }
+        .book-menu a.active,
+        .book-menu a:hover,
+        .book-toc a:hover { color: var(--accent); }
+        .book-search input::placeholder { color: var(--muted); }
+        .markdown blockquote { border-inline-start: .25rem solid var(--accent); }
+        .markdown .book-expand-head,
+        .markdown .book-tabs label { color: var(--text); }
     </style>
     </head>
 
